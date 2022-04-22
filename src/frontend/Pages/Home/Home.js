@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="pagewrap">
       <Header />
-      <div className="categories space-around ">
+      <div className="mt-5 space-around ">
         {categories &&
           categories.map((category) => (
             <Categories category={category} key={category._id} />
