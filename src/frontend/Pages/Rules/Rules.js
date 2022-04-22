@@ -1,6 +1,5 @@
 import React from "react";
-import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Header/Header";
+import { Footer, Header } from "../../Components";
 import "./Rules.css";
 
 const Rules = () => {
@@ -30,4 +29,4 @@ const Rules = () => {
   );
 };
 
-export default Rules;
+export { Rules };

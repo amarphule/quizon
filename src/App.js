@@ -1,7 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./frontend/Pages/Home/Home";
+import { Home, Rules } from "./frontend/Pages";
 import "./App.css";
-import Rules from "./frontend/Pages/Rules/Rules";
 
 function App() {
   return (

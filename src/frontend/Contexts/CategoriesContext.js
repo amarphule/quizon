@@ -22,6 +22,6 @@ const CategoriesProvider = ({ children }) => {
   );
 };
 
-export const useCategories = () => useContext(CategoriesContext);
+const useCategories = () => useContext(CategoriesContext);
 
-export default CategoriesProvider;
+export { CategoriesProvider, useCategories };

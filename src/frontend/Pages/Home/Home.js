@@ -1,9 +1,7 @@
 import React from "react";
 import "./Home.css";
-import Categories from "../../Components/Categories/Categories";
-import Header from "../../Components/Header/Header";
-import Footer from "../../Components/Footer/Footer";
-import { useCategories } from "../../Contexts/CategoriesContext";
+import { Categories, Header, Footer } from "../../Components";
+import { useCategories } from "../../Contexts";
 
 const Home = () => {
   const { categories } = useCategories();
@@ -21,4 +19,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export { Home };
