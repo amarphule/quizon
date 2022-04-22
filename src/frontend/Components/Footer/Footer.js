@@ -5,4 +5,4 @@ const Footer = () => {
   return <div className="footer">Made with ❤️ by Amardeep Phule.</div>;
 };
 
-export default Footer;
+export { Footer };

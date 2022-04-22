@@ -1,0 +1,15 @@
+.mt-5{
+    margin-top: 5rem;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    flex-grow: 1;
+    margin-top: 5rem
+}
+.btn{
+    color: #fff;
+}
+.btn:hover{
+    color: black;
+}

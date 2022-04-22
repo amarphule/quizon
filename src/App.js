@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./frontend/Pages/Home/Home";
+import { Home, Rules } from "./frontend/Pages";
 import "./App.css";
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
     <div className="app">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/rules" element={<Rules />} />
       </Routes>
     </div>
   );

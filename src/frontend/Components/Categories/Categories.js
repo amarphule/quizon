@@ -1,10 +1,12 @@
 import React from "react";
 import "./Categories.css";
+import { useNavigate } from "react-router-dom";
 
 const Categories = ({ category }) => {
-  const { _id, categoryName, image, name, description } = category;
+  const navigate = useNavigate();
+  const { image, name, description } = category;
   return (
-    <div className="card card-vertical">
+    <div onClick={() => navigate("/rules")} className="card card-vertical">
       <img src={image} alt={name} />
       <div className="card-details">
         <div className="title">{name}</div>
@@ -14,4 +16,4 @@ const Categories = ({ category }) => {
   );
 };
 
-export default Categories;
+export { Categories };
