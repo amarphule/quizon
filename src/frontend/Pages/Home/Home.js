@@ -7,13 +7,14 @@ import { useCategories } from "../../Contexts/CategoriesContext";
 
 const Home = () => {
   const { categories } = useCategories();
-  console.log(categories);
   return (
     <div className="pagewrap">
       <Header />
       <div className="categories space-around ">
         {categories &&
-          categories.map((category) => <Categories category={category} />)}
+          categories.map((category) => (
+            <Categories category={category} key={category._id} />
+          ))}
       </div>
       <Footer />
     </div>
