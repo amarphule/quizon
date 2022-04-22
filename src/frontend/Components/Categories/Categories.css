@@ -1,0 +1,52 @@
+.card {
+    width: 22%;
+    border-radius: 1rem;
+    background-color: rgb(22, 21, 21);
+    box-sizing: border-box;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.card img{
+    height: 20rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.card-details{
+    padding: 1rem;
+}
+.title{
+    color: #fff;
+    font-size: 1.5vw;
+}
+.subTitle{
+    font-size: 1vw;
+}
+@media screen and (max-width: 540px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .title{
+        font-size: 5vw;
+    }
+    .subTitle{
+        font-size: 3vw;
+    }
+  }
+
+@media screen and (min-width: 540px) and (max-width: 780px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+    .title{
+        font-size: 3vw;
+    }
+    .subTitle{
+        font-size: 2vw;
+    }
+  }
