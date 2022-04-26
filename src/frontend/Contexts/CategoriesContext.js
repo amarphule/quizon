@@ -8,7 +8,7 @@ const CategoriesProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       try {
-        const resp = await axios("/api/categories");
+        const resp = await axios.get("/api/categories");
         setCategories(resp.data.categories);
       } catch (error) {
         console.log("Category Error: ", error);

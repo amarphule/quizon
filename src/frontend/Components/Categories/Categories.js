@@ -5,8 +5,12 @@ import { useNavigate } from "react-router-dom";
 const Categories = ({ category }) => {
   const navigate = useNavigate();
   const { image, name, description } = category;
+  const chosenQue = (name) => {
+    sessionStorage.setItem("name", name);
+    navigate("/rules");
+  };
   return (
-    <div onClick={() => navigate("/rules")} className="card card-vertical">
+    <div onClick={() => chosenQue(name)} className="card card-vertical">
       <img src={image} alt={name} />
       <div className="card-details">
         <div className="title">{name}</div>

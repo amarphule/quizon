@@ -1,0 +1,11 @@
+.card-single-que{
+    width: 70%
+}
+.card-details-text .btns{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.mt-3{
+margin-top: 3rem;
+}

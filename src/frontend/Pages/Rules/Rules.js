@@ -1,8 +1,13 @@
 import React from "react";
 import { Footer, Header } from "../../Components";
+import { useNavigate } from "react-router-dom";
 import "./Rules.css";
 
 const Rules = () => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/question");
+  };
   return (
     <div className="pagewrap">
       <Header />
@@ -22,7 +27,9 @@ const Rules = () => {
             After completing all questions you will see total score you got.
           </li>
         </ol>
-        <button className="btn btn-cta-outline-icon">Play Quiz</button>
+        <button className="btn btn-cta-outline-icon" onClick={handleClick}>
+          Play Quiz
+        </button>
       </div>
       <Footer />
     </div>
