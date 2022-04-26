@@ -8,7 +8,6 @@ const QuestionProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       const resp = await axios.get("/api/quizzes");
-      console.log();
       setQuestions(resp.data.quizes);
     })();
   }, []);
