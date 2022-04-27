@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import { Home, Rules } from "./frontend/Pages";
+import { Home, Question, Rules } from "./frontend/Pages";
 import "./App.css";
+import { Result } from "./frontend/Pages/Result/Result";
+import { SingleQuestion } from "./frontend/Components";
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/rules" element={<Rules />} />
+        <Route path="/question" element={<Question />} />
+        <Route path="/result" element={<Result />} />
       </Routes>
     </div>
   );
