@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    word-break: break-word;
 }
 .mt-3{
 margin-top: 3rem;

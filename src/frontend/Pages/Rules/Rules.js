@@ -15,7 +15,7 @@ const Rules = () => {
         <h1>Rules to Solve Quiz</h1>
         <ol>
           <li>You can choose 1 answer amongs the given options.</li>
-          <li>You will get 1 point for each correct answer.</li>
+          <li>You will get 2 point for each correct answer.</li>
           <li>
             You can see you name and score left and right respectively on top of
             question.
