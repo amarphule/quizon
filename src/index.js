@@ -4,7 +4,11 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter as Router } from "react-router-dom";
 import { makeServer } from "./server";
-import { CategoriesProvider, QuestionProvider } from "./frontend/Contexts";
+import {
+  CategoriesProvider,
+  QuestionProvider,
+  ScoreProvider,
+} from "./frontend/Contexts";
 
 // Call make Server
 makeServer();
@@ -14,7 +18,9 @@ ReactDOM.render(
     <Router>
       <CategoriesProvider>
         <QuestionProvider>
-          <App />
+          <ScoreProvider>
+            <App />
+          </ScoreProvider>
         </QuestionProvider>
       </CategoriesProvider>
     </Router>
