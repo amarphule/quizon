@@ -17,6 +17,7 @@ export const Question = () => {
   );
 
   const quitHandler = () => {
+    sessionStorage.removeItem("name");
     navigate("/");
   };
 
