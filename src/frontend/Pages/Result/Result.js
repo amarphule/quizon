@@ -28,10 +28,8 @@ export const Result = () => {
       <Header />
       <div className="mt-5 text-center">
         {score > 5 ? (
-          // <h1>{`Yay!!! 🥳 Your score is ${score} good job play again.`}</h1>
           <h1>Yay!!! 🥳 Your score is {score} good job play again.</h1>
         ) : (
-          // <h1>{`Oh Ohh.. 😐 Your score is ${score}, give it a try once again.`}</h1>
           <h1>
             Oh Ohh.. 😐 Your score is <span>{score}</span>, give it a try once
             again.
