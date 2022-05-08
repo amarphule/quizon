@@ -1,18 +1,36 @@
-import React from "react";
-import { useScore } from "../../Contexts";
+import React, { useState } from "react";
+import { useQuestion, useScore } from "../../Contexts";
 
 import "./SingleQuestion.css";
 
-const SingleQuestion = ({ quiz, nextHandler }) => {
+const SingleQuestion = ({ quiz, nextHandler, result }) => {
   const { _id, answer, options, question } = quiz;
   const { setScoreHandler } = useScore();
+  const { setResultArr } = useQuestion();
 
-  const ansCheckHandler = (selectedValue) => {
-    if (answer === selectedValue) {
+  const ansCheckHandler = (option) => {
+    setResultArr((prevQue) => [...prevQue, option]);
+    if (option === answer) {
       setScoreHandler();
     }
     nextHandler();
   };
+
+  const styleHandler = (option) => {
+    if (result == undefined) {
+      return "btn-cta-outline";
+    }
+    if (option == answer) {
+      return "btn-success-outline";
+    }
+    if (result == answer && option == result) {
+      return "btn-success-outline";
+    } else if (result !== answer && option == result) {
+      return "btn-error-outline";
+    }
+    return "btn-cta-outline";
+  };
+
   return (
     <div className="card card-single-que">
       <div className="card-details-text">
@@ -22,7 +40,7 @@ const SingleQuestion = ({ quiz, nextHandler }) => {
             <button
               key={index}
               onClick={() => ansCheckHandler(option)}
-              className="btn btn-cta-outline"
+              className={`btn ${styleHandler(option)}`}
             >
               {option}
             </button>
